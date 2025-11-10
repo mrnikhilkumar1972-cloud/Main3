@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills Showcase Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px;
+      color: white;
+    }
+
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    header p {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+    .skills-section {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    }
+
+    .section-title {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #667eea;
+      text-align: center;
+      position: relative;
+      padding-bottom: 15px;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      border-radius: 2px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .skill-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 30px;
+      border-radius: 15px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid transparent;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+      border-color: #667eea;
+    }
+
+    .skill-icon {
+      font-size: 3rem;
+      margin-bottom: 15px;
+    }
+
+    .skill-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: #333;
+    }
+
+    .skill-card p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    .skill-level {
+      margin-top: 15px;
+    }
+
+    .level-bar {
+      background: #e0e0e0;
+      height: 8px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+
+    .level-fill {
+      background: linear-gradient(90deg, #667eea, #764ba2);
+      height: 100%;
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .about-section {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      color: #555;
+      max-width: 800px;
+      margin: 20px auto;
+    }
+
+    .contact-section {
+      background: white;
+      border-radius: 20px;
+      padding: 40px;
+      margin: 40px 0;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      margin-top: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .contact-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: white;
+      opacity: 0.9;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My Skills Portfolio</h1>
+      <p>Showcasing expertise and passion for excellence</p>
+    </header>
+
+    <section class="about-section">
+      <h2 class="section-title">About Me</h2>
+      <p>
+        Welcome to my skills showcase! I'm a dedicated professional with a passion for continuous learning 
+        and growth. This portfolio highlights my core competencies and areas of expertise. Each skill 
+        represents countless hours of practice, projects, and real-world application.
+      </p>
+    </section>
+
+    <section class="skills-section">
+      <h2 class="section-title">Core Skills</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="skill-icon">💻</div>
+          <h3>Web Development</h3>
+          <p>Building modern, responsive websites with clean code and great UX</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🎨</div>
+          <h3>Design</h3>
+          <p>Creating beautiful, user-centered designs that enhance experiences</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">📊</div>
+          <h3>Data Analysis</h3>
+          <p>Extracting insights from complex data to drive informed decisions</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 80%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🚀</div>
+          <h3>Project Management</h3>
+          <p>Leading teams and delivering projects on time and within scope</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 85%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">💡</div>
+          <h3>Problem Solving</h3>
+          <p>Analytical thinking and creative solutions to complex challenges</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 95%;"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-icon">🤝</div>
+          <h3>Communication</h3>
+          <p>Clear, effective communication across teams and stakeholders</p>
+          <div class="skill-level">
+            <div class="level-bar">
+              <div class="level-fill" style="width: 90%;"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <h2 class="section-title">Let's Connect</h2>
+      <p>Interested in working together? I'd love to hear from you!</p>
+      <a href="mailto:your.email@example.com" class="contact-btn">Get In Touch</a>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Skills Portfolio. Built with passion and deployed on Netlify.</p>
+    </footer>
+  </div>
+</body>
+</html>
